@@ -396,8 +396,8 @@ def ip_thread():
 
     try:
         # Aktif dış bağlantıları topla
-        #ips = {c.raddr.ip for c in psutil.net_connections(kind='inet') if c.raddr and c.status == 'ESTABLISHED'}
-        ips = {"185.220.101.1"}  # Tor çıkış nodu, AbuseIPDB skoru yüksektir
+        ips = {c.raddr.ip for c in psutil.net_connections(kind='inet') if c.raddr and c.status == 'ESTABLISHED'}
+        #ips = {"185.220.101.1"}  # Tor çıkış nodu, AbuseIPDB skoru yüksektir #testtir
 
         total = len(ips)
         if not total:
