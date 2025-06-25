@@ -1,4 +1,3 @@
-
 import tkinter as tk
 from tkinter import messagebox, Toplevel, Label
 import threading
@@ -148,7 +147,10 @@ def show_user_safe_report():
                     f.write(f"- {h}\n")
 
             if ip_report_data:
-                f.write("🌐 Şüpheli IP Bağlantıları (AbuseIPDB skoru 50+):\n\n")
+                f.write("""🌐 Şüpheli IP Bağlantıları\n
+                        - 0–20: Güvenli\n
+                        - 21–49: Şüpheli\n
+                        - 50 ve üzeri: Tehlikeli\n(AbuseIPDB skoru 50+):\n\n""")
                 for ip, score in ip_report_data:
                     f.write(f"- {ip} (Skor: {score})\n")
                 f.write("\n")
@@ -364,14 +366,7 @@ def vt_thread():
         messagebox.showerror("VT Hatası", str(e))
 
 def start_vt_update():
-    if not VT_API_KEY or VT_API_KEY == "VirusTotalAPIkey":
-        messagebox.showwarning(
-            "API Anahtarı Eksik",
-            "VirusTotal API anahtarını girmediğiniz için bu özellik kullanılamaz."
-        )
-        return
     threading.Thread(target=vt_thread, daemon=True).start()
-
 # ===================== IP ANALİZİ =====================
 
 def ip_thread():
@@ -426,14 +421,7 @@ def ip_thread():
         messagebox.showerror("IP Hatası", str(e))
 
 def start_ip_analysis():
-    if not ABUSE_API_KEY or ABUSE_API_KEY == "AbuseIP_API_key":
-        messagebox.showwarning(
-            "API Anahtarı Eksik",
-            "AbuseIPDB API anahtarını girmediğiniz için bu özellik kullanılamaz."
-        )
-        return
     threading.Thread(target=ip_thread, daemon=True).start()
-
 # ===================== RAPOR GÖRÜNTÜLE =====================
 
 def show_report():
@@ -510,4 +498,6 @@ tk.Button(root, text="🔗 İnterneti Aç", command=enable_internet, width=40).p
 tk.Button(root, text="👤 Son Kullanıcı Raporu", command=show_user_safe_report, width=40).pack(pady=10)
 
 root.mainloop()
+
+
 
