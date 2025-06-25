@@ -62,6 +62,19 @@ explanation_text = """
 
 # ===================== YARDIMCI FONKSİYONLAR =====================
 
+def update_api_keys():
+    """Kullanıcı mevcut API anahtarlarını değiştirmek isterse bu fonksiyon çağrılır."""
+    prompt_api_keys()
+    updated = load_api_keys()
+    if updated and updated.get("VT_API_KEY") and updated.get("ABUSE_API_KEY"):
+        global VT_API_KEY, ABUSE_API_KEY
+        VT_API_KEY = updated["VT_API_KEY"]
+        ABUSE_API_KEY = updated["ABUSE_API_KEY"]
+        messagebox.showinfo("Güncelleme", "API anahtarları güncellendi.")
+    else:
+        messagebox.showwarning("Eksik Bilgi", "Geçerli API anahtarları girilmedi. Eski anahtarlar kullanılmaya devam edilecek.")
+
+
 def load_api_keys():
     config_file = "api_config.json"
     if not os.path.exists(config_file):
@@ -516,6 +529,9 @@ tk.Button(root, text="🔌 İnterneti Kes", command=cut_internet, width=40).pack
 tk.Button(root, text="🔗 İnterneti Aç", command=enable_internet, width=40).pack(pady=10)
 
 tk.Button(root, text="👤 Son Kullanıcı Raporu", command=show_user_safe_report, width=40).pack(pady=10)
+
+tk.Button(root, text="🔑 API Anahtarlarını Güncelle", command=update_api_keys, width=40).pack(pady=10)
+
 
 root.mainloop()
 
