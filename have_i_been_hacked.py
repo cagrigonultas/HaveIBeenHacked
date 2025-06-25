@@ -12,8 +12,8 @@ import time
 from datetime import datetime, timedelta
 
 # ===================== API ANAHTARLARI =====================
-API_KEY = "ed6547bc57c8ac7861ffd694307f9a5a5c6e8d4cea1a12b02b9f9e6a613b59af"
-ABUSE_API_KEY = "5a8ddc5c73913cbd39c1eaa0621381c1bb328bd5a6dac3649b66fdab66af40f5b87b58d03daddc51"
+API_KEY = "VirusTotalAPIkey"
+ABUSE_API_KEY = "AbuseIP_API_key"
 
 # ===================== SABİT DOSYA ADLARI =====================
 VT_CHECK_LIMIT_PER_DAY = 500
