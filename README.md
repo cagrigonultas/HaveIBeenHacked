@@ -26,7 +26,7 @@ Bu araç, özellikle teknik bilgisi olmayan kullanıcıların sisteminde şüphe
 Bu uygulama doğrudan çalıştırılabilir `.exe` dosyası olarak paketlenmiştir. Python kurulumu gerekmez.
 
 > 📥 **Uygulamanın son sürümünü indirmek için**:  
-👉 [Releases sekmesine tıklayın](https://github.com/<cagrigonultas>/HaveIBeenHacked/releases)
+👉 [Releases sekmesine tıklayın](https://github.com/cagrigonultas/HaveIBeenHacked/releases)
 
 ---
 
