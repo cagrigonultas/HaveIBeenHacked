@@ -10,6 +10,7 @@ import hashlib
 import pefile
 import time
 from datetime import datetime, timedelta
+import sys
 
 # ===================== API ANAHTARLARI =====================
 API_KEY = "VirusTotalAPIkey"
@@ -27,6 +28,15 @@ root.title("Have I Been Hacked?")
 root.geometry("600x850")
 root.resizable(False, False)
 root.iconbitmap("have_i_been_hacked.ico")
+try:
+    icon_path = os.path.join(sys._MEIPASS, "have_i_been_hacked.ico")
+except Exception:
+    icon_path = "have_i_been_hacked.ico"
+
+try:
+    root.iconbitmap(icon_path)
+except:
+    pass
 
 # ===================== BUTON AÇIKLAMALARI =====================
 explanation_text = """
