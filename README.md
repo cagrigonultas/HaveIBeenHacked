@@ -42,6 +42,7 @@ Bu araç, özellikle teknik bilgisi olmayan kullanıcıların sisteminde şüphe
 - Son kullanıcıysanız “Son Kullanıcı Raporu” sizin için sade bir biçimde düzenlenmiştir. Detaylı rapor meraklılar ve analistler içindir.
 - Internet erişimi kesme/açma işlemi yönetici yetkisi gerektirir. Uygulama başlatılırken yetki isteği kabul edilmelidir.
 - VirusTotal Güncelleme kısmı günde 1 kere çalışacak şekilde ayarlıdır. Bunun sebebi ücretsiz sürümde kısıtlamaların olmasıdır. Premium API sahibi hesaplar bu kısıtı kaldırabilir.
+- API anahtarları mutlaka doğru girilmelidir. Yanlış girilmesi durumunda sonuçlar yanıltıcı olabilir.
 ## ⚠️ “Bilinmeyen Yayıncı” Uyarısı Hakkında
 
 Windows, bu uygulamayı ilk kez çalıştırırken aşağıdaki gibi bir uyarı verebilir:
