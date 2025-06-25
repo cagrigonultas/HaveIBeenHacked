@@ -48,6 +48,34 @@ Bu araç, özellikle teknik bilgisi olmayan kullanıcıların sisteminde şüphe
 - Son kullanıcıysanız “Son Kullanıcı Raporu” sizin için sade bir biçimde düzenlenmiştir. Detaylı rapor meraklılar ve analistler içindir.
 - Internet erişimi kesme/açma işlemi yönetici yetkisi gerektirir. Uygulama başlatılırken yetki isteği kabul edilmelidir.
 - VirusTotal Güncelleme kısmı günde 1 kere çalışacak şekilde ayarlıdır. Bunun sebebi ücretsiz sürümde kısıtlamaların olmasıdır. Premium API sahibi hesaplar bu kısıtı kaldırabilir.
+🛡️ İlk Kurulumda API Key Girmeniz Gerekiyor
+- Uygulama ilk kez çalıştırıldığında sizden iki API anahtarı istenecektir:
+  ## 🔑 API Anahtarları Nasıl Alınır?
+
+Uygulamayı kullanmadan önce iki adet ücretsiz API anahtarına ihtiyacınız var:
+
+### 1. VirusTotal API Key
+
+1. [https://www.virustotal.com/gui/join-us](https://www.virustotal.com/gui/join-us) adresine gidin.
+2. Ücretsiz bir hesap oluşturun veya giriş yapın.
+3. Sağ üstten profilinize tıklayın → *API Key* bölümüne gidin.
+4. Buradaki anahtarı kopyalayın.
+
+### 2. AbuseIPDB API Key
+
+1. [https://www.abuseipdb.com/register](https://www.abuseipdb.com/register) adresinden kayıt olun veya giriş yapın.
+2. Sağ üstten *API* bölümüne girin.
+3. Ücretsiz bir API Key oluşturun ve kopyalayın.
+
+### 🔧 Anahtarları Uygulamaya Tanıtma
+
+İlk kez uygulamayı açtığınızda bu anahtarlar sizden GUI üzerinden istenecek. Girdiğiniz anahtarlar otomatik olarak `apikeys.json` adlı dosyaya kaydedilecek ve bir daha sormayacak.
+
+> NOT: Anahtarlarınızı kimseyle paylaşmayın! Sadece sizin sisteminizde çalışmalıdır.
+
+
+🔐 Bu anahtarlar sadece sizin bilgisayarınızda saklanır ve başkalarıyla paylaşılmaz.
+
 ---
 ## 🧰 Kurulum
 

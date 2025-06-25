@@ -11,6 +11,7 @@ import pefile
 import time
 from datetime import datetime, timedelta
 import sys
+import json
 
 # ===================== API ANAHTARLARI =====================
 API_KEY = "VirusTotalAPIkey"
@@ -21,6 +22,8 @@ VT_CHECK_LIMIT_PER_DAY = 500
 BLACKLIST_FILE = "blacklist_hashes.txt"
 HASH_POOL_FILE = "daily_hash_pool.txt"
 VT_LAST_UPDATE_FILE = "last_update.txt"
+
+
 
 # ===================== TKINTER KURULUMU =====================
 root = tk.Tk()
@@ -59,6 +62,44 @@ explanation_text = """
 
 
 # ===================== YARDIMCI FONKSİYONLAR =====================
+
+def load_api_keys():
+    config_file = "api_config.json"
+    if not os.path.exists(config_file):
+        return None
+    with open(config_file, "r", encoding="utf-8") as f:
+        try:
+            return json.load(f)
+        except:
+            return None
+        
+def prompt_api_keys():
+    win = tk.Toplevel()
+    win.title("API Anahtarları")
+    win.geometry("400x200")
+    
+    tk.Label(win, text="VirusTotal API Key:").pack()
+    vt_entry = tk.Entry(win, width=40)
+    vt_entry.pack()
+
+    tk.Label(win, text="AbuseIPDB API Key:").pack()
+    ab_entry = tk.Entry(win, width=40)
+    ab_entry.pack()
+
+    def save_keys():
+        keys = {
+            "VT_API_KEY": vt_entry.get().strip(),
+            "ABUSE_API_KEY": ab_entry.get().strip()
+        }
+        with open("api_config.json", "w", encoding="utf-8") as f:
+            json.dump(keys, f)
+        win.destroy()
+
+    tk.Button(win, text="Kaydet", command=save_keys).pack(pady=10)
+    win.transient(root)
+    win.grab_set()
+    root.wait_window(win)
+
 
 def show_user_safe_report():
     try:
@@ -175,6 +216,15 @@ def load_blacklist():
 # ===================== GLOBAL DEĞİŞKENLER =====================
 detected = []
 ip_report_data = []
+
+# =====================   =====================
+
+api_keys = load_api_keys()
+if not api_keys:
+    prompt_api_keys()
+    api_keys = load_api_keys()
+VT_API_KEY = api_keys["VT_API_KEY"]
+ABUSE_API_KEY = api_keys["ABUSE_API_KEY"]
 
 # ===================== İŞLEM TARAMASI =====================
 
