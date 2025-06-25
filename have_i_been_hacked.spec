@@ -5,7 +5,7 @@ a = Analysis(
     ['have_i_been_hacked.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('have_i_been_hacked.ico', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
