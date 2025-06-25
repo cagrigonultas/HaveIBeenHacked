@@ -1,7 +1,4 @@
 
-# Tek Dosyalık "Have I Been Hacked?" Uygulaması
-# (İşlem Taraması + VirusTotal Güncelleme + AbuseIPDB IP Analizi + Detaylı Rapor + İnternet Kes/Aç)
-
 import tkinter as tk
 from tkinter import messagebox, Toplevel, Label
 import threading
