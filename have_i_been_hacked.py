@@ -76,7 +76,7 @@ def prompt_api_keys():
     win = tk.Toplevel()
     win.title("API Anahtarları")
     win.geometry("400x200")
-    
+
     tk.Label(win, text="VirusTotal API Key:").pack()
     vt_entry = tk.Entry(win, width=40)
     vt_entry.pack()
@@ -86,18 +86,30 @@ def prompt_api_keys():
     ab_entry.pack()
 
     def save_keys():
-        keys = {
-            "VT_API_KEY": vt_entry.get().strip(),
-            "ABUSE_API_KEY": ab_entry.get().strip()
-        }
+        vt_key = vt_entry.get().strip()
+        ab_key = ab_entry.get().strip()
+        if not vt_key or not ab_key:
+            messagebox.showerror("Hata", "API anahtarları boş bırakılamaz!")
+            win.destroy()
+            root.destroy()
+            return
+        keys = {"VT_API_KEY": vt_key, "ABUSE_API_KEY": ab_key}
         with open("api_config.json", "w", encoding="utf-8") as f:
             json.dump(keys, f)
         win.destroy()
+
+    def on_close():
+        messagebox.showwarning("Zorunlu Alan", "API anahtarları girilmeden uygulama başlatılamaz.")
+        win.destroy()
+        root.destroy()
+
+    win.protocol("WM_DELETE_WINDOW", on_close)
 
     tk.Button(win, text="Kaydet", command=save_keys).pack(pady=10)
     win.transient(root)
     win.grab_set()
     root.wait_window(win)
+
 
 
 def show_user_safe_report():
@@ -222,10 +234,14 @@ ip_report_data = []
 # =====================   =====================
 
 api_keys = load_api_keys()
-if not api_keys:
-    prompt_api_keys()
+if not api_keys or not api_keys.get("VT_API_KEY") or not api_keys.get("ABUSE_API_KEY"):
+    prompt_api_keys()                       # kullanıcıya sor
     api_keys = load_api_keys()
-VT_API_KEY = api_keys["VT_API_KEY"]
+    if not api_keys or not api_keys.get("VT_API_KEY") or not api_keys.get("ABUSE_API_KEY"):
+        root.destroy()
+        sys.exit()
+
+VT_API_KEY   = api_keys["VT_API_KEY"]
 ABUSE_API_KEY = api_keys["ABUSE_API_KEY"]
 
 # ===================== İŞLEM TARAMASI =====================
