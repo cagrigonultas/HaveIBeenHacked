@@ -364,7 +364,14 @@ def vt_thread():
         messagebox.showerror("VT Hatası", str(e))
 
 def start_vt_update():
+    if not VT_API_KEY or VT_API_KEY == "VirusTotalAPIkey":
+        messagebox.showwarning(
+            "API Anahtarı Eksik",
+            "VirusTotal API anahtarını girmediğiniz için bu özellik kullanılamaz."
+        )
+        return
     threading.Thread(target=vt_thread, daemon=True).start()
+
 # ===================== IP ANALİZİ =====================
 
 def ip_thread():
@@ -419,7 +426,14 @@ def ip_thread():
         messagebox.showerror("IP Hatası", str(e))
 
 def start_ip_analysis():
+    if not ABUSE_API_KEY or ABUSE_API_KEY == "AbuseIP_API_key":
+        messagebox.showwarning(
+            "API Anahtarı Eksik",
+            "AbuseIPDB API anahtarını girmediğiniz için bu özellik kullanılamaz."
+        )
+        return
     threading.Thread(target=ip_thread, daemon=True).start()
+
 # ===================== RAPOR GÖRÜNTÜLE =====================
 
 def show_report():
