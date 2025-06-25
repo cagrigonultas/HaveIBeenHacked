@@ -23,7 +23,7 @@ Bu araç, özellikle teknik bilgisi olmayan kullanıcıların sisteminde şüphe
 
 ## 🧰 Kurulum
 
-Bu uygulama doğrudan çalıştırılabilir `.exe` dosyası olarak paketlenmiştir. Python kurulumu gerekmez.
+Bu uygulama doğrudan çalıştırılabilir `.exe` dosyası olarak paketlenmiştir. 
 
 > 📥 **Uygulamanın son sürümünü indirmek için**:  
 👉 [Releases sekmesine tıklayın](https://github.com/cagrigonultas/HaveIBeenHacked/releases)
@@ -38,4 +38,4 @@ have_i_been_hacked.spec    # PyInstaller yapılandırma dosyası
 have_i_been_hacked.ico     # Özel simge dosyası
 README.md                  # Bu dosya
 requirements.txt           # Gerekli kütüphaneler
-dist/                      # EXE çıktısı burada (sürümde ayrı paylaşılır)
+
