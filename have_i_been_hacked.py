@@ -129,7 +129,7 @@ def show_user_safe_report():
 
         # Tarihli ve saatli benzersiz dosya adı
         timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-        filename = f"AmIHacked_UserReport_{timestamp}.txt"
+        filename = f"HaveIBeenHacked_UserReport_{timestamp}.txt"
         desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
         report_file = os.path.join(desktop_path, filename)
 
