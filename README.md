@@ -35,13 +35,7 @@ Bu araç, özellikle teknik bilgisi olmayan kullanıcıların sisteminde şüphe
 
 
 ---
-## 🔐 API Anahtarları
 
-> 🔑 Aşağıdaki alanlara kendi API anahtarlarınızı girmeniz gerekir.
-
-- `API_KEY`: [VirusTotal](https://www.virustotal.com/) API Key  
-- `ABUSE_API_KEY`: [AbuseIPDB](https://www.abuseipdb.com/) API Key
----
 ## 📌 Bilgilendirme
 
 - Uygulama yalnızca Windows ortamında çalışmak üzere geliştirilmiştir.
@@ -71,14 +65,14 @@ Uygulamayı kullanmadan önce iki adet ücretsiz API anahtarına ihtiyacınız v
 
 ### 1. VirusTotal API Key
 
-1. [https://www.virustotal.com/gui/join-us](https://www.virustotal.com/gui/join-us) adresine gidin.
+1. [https://www.virustotal.com/gui/join-us](https://www.virustotal.com/gui/join-us) adresine gidin. (Yeni sekmede açılması önerilir.)
 2. Ücretsiz bir hesap oluşturun veya giriş yapın.
 3. Sağ üstten profilinize tıklayın → *API Key* bölümüne gidin.
 4. Buradaki anahtarı kopyalayın.
 
 ### 2. AbuseIPDB API Key
 
-1. [https://www.abuseipdb.com/register](https://www.abuseipdb.com/register) adresinden kayıt olun veya giriş yapın.
+1. [https://www.abuseipdb.com/register](https://www.abuseipdb.com/register) adresinden kayıt olun veya giriş yapın. (Yeni sekmede açılması önerilir.)
 2. Sağ üstten *API* bölümüne girin.
 3. Ücretsiz bir API Key oluşturun ve kopyalayın.
 
@@ -97,7 +91,7 @@ Uygulamayı kullanmadan önce iki adet ücretsiz API anahtarına ihtiyacınız v
 Bu uygulama doğrudan çalıştırılabilir `.exe` dosyası olarak paketlenmiştir. 
 
 > 📥 **Uygulamanın son sürümünü indirmek için**:  
-👉 [Releases sekmesine tıklayın](https://github.com/cagrigonultas/HaveIBeenHacked/releases)
+👉 [Releases sekmesine tıklayın](https://github.com/cagrigonultas/HaveIBeenHacked/releases) (exe dosyasını ve .ico dosyasını indirmek yeterlidir. Aynı klasörde olmalarına dikkat edilmeli)
 
 ---
 
