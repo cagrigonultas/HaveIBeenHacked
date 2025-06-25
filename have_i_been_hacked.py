@@ -238,8 +238,12 @@ if not api_keys or not api_keys.get("VT_API_KEY") or not api_keys.get("ABUSE_API
     prompt_api_keys()                       # kullanıcıya sor
     api_keys = load_api_keys()
     if not api_keys or not api_keys.get("VT_API_KEY") or not api_keys.get("ABUSE_API_KEY"):
-        root.destroy()
+        try:
+            root.destroy()
+        except:
+            pass
         sys.exit()
+
 
 VT_API_KEY   = api_keys["VT_API_KEY"]
 ABUSE_API_KEY = api_keys["ABUSE_API_KEY"]
