@@ -43,6 +43,22 @@ Bu araç, özellikle teknik bilgisi olmayan kullanıcıların sisteminde şüphe
 - Internet erişimi kesme/açma işlemi yönetici yetkisi gerektirir. Uygulama başlatılırken yetki isteği kabul edilmelidir.
 - VirusTotal Güncelleme kısmı günde 1 kere çalışacak şekilde ayarlıdır. Bunun sebebi ücretsiz sürümde kısıtlamaların olmasıdır. Premium API sahibi hesaplar bu kısıtı kaldırabilir.
 - API anahtarları mutlaka doğru girilmelidir. Yanlış girilmesi durumunda sonuçlar yanıltıcı olabilir.
+## 🛡️ Windows Defender “Virüs Algılandı” Uyarısı
+
+Bazı antivirüs yazılımları (özellikle **Windows Defender**) bu uygulamayı yanlışlıkla zararlı olarak algılayabilir.  
+Bu bir **false positive**’tir. Kaynak kodlar GitHub’da açıkça paylaşıldığından, uygulamanın zararlı olmadığı doğrulanabilir.
+
+### ⚠️ Windows Defender’da Dosyaya İzin Verme
+
+1. **Başlat Menüsü → Windows Güvenliği** uygulamasını açın.  
+2. Sol menüden **Virüs ve tehdit koruması** sekmesine tıklayın.  
+3. **Koruma geçmişi** bölümüne girin (sayfanın altında).  
+4. Listede `have_i_been_hacked.exe` uyarısını bulun ve açın.  
+5. **Eylemler** menüsünü açın → **İzin ver** seçeneğine tıklayın.  
+
+> 🔐 Bu adım yalnızca güvenilir yazılımlar için yapılmalıdır.  
+> “Have I Been Hacked?” uygulaması açık kaynaklıdır ve kötü amaçlı işlem içermez.
+
 ## ⚠️ “Bilinmeyen Yayıncı” Uyarısı Hakkında
 
 Windows, bu uygulamayı ilk kez çalıştırırken aşağıdaki gibi bir uyarı verebilir:
