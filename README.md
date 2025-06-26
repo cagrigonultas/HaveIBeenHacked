@@ -13,6 +13,13 @@
 - ✔️ Sezgisel grafik arayüz ve ilerleme göstergeleri içerir.
 
 ---
+### 🎥 Uygulama Tanıtım Videosu
+
+[![YouTube Video Önizleme](https://img.youtube.com/vi/h2NBEB0Arbw/0.jpg)](https://www.youtube.com/watch?v=h2NBEB0Arbw)
+
+> 🔗 Videoyu izlemek için görsele tıklayın.
+
+---
 ## 📦 Gerekli Kurulumlar (`requirements.txt`)
 ---
 ## 🎯 Amaç
